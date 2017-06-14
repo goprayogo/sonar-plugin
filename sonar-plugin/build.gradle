@@ -1,0 +1,32 @@
+apply plugin: 'com.iadams.sonar-packaging'
+
+pluginPackaging.dependsOn 'compileJava'
+
+ext {
+    versions = [
+            sonar: '6.3.1'
+    ]
+}
+
+dependencies {
+    provided "org.sonarsource.sonarqube:sonar-plugin-api:${versions.sonar}"
+    provided("org.sonarsource.sonarqube:sonar-core:${versions.sonar}") {
+        exclude module: 'commons-lang'
+    }
+}
+
+sonarPackaging {
+    serverUrl = 'http://localhost:9000'
+    pluginDir = '../sonarqube-6.3/extensions/plugins'
+    pluginKey = 'example'
+    pluginClass = 'id.goprayogo.sonar.MyPlugin'
+    pluginName = 'Example'
+    pluginDescription = 'Exmaple'
+    pluginParent = null
+    pluginLicense = 'MIT'
+    requirePlugins = 'sonarJava'
+    pluginDevelopers = 'Gama Ogi Prayogo'
+    skipDependenciesPackaging = false
+    useChildFirstClassLoader = false
+    basePlugin = ''
+}

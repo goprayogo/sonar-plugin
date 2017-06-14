@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Plugin-Description: Exmaple
+Plugin-Dependencies: 
+Plugin-SourcesUrl: 
+Plugin-BuildDate: 2017-06-14T11:26:18+0700
+Built-By: goprayogo
+Plugin-Homepage: 
+Plugin-License: MIT
+Plugin-Version: unspecified
+Plugin-Organization: 
+Sonar-Version: 6.3.1
+Plugin-Developers: Gama Ogi Prayogo
+Plugin-IssueTrackerUrl: 
+Plugin-TermsConditionsUrl: 
+Plugin-OrganizationUrl: 
+Build-Time: 2017-06-14T11:26:18+0700
+Plugin-Key: example
+Plugin-Class: id.goprayogo.sonar.MyPlugin
+Plugin-RequirePlugins: sonarJava
+Created-By: Gradle
+Build-Jdk: 1.8.0_111
+Plugin-Name: Example
+

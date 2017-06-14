@@ -1,0 +1,31 @@
+buildscript {
+    ext {
+        versions = [
+                gradleSonar         : "0.1.4"
+        ]
+        sonar_example_plugin = "0.0.1"
+    }
+
+    dependencies {
+        classpath "gradle.plugin.com.iadams.plugins:gradle-sonar-packaging-plugin:${versions.gradleSonar}"
+    }
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        mavenCentral()
+        jcenter()
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        mavenCentral()
+        jcenter()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    version = "0.0.1"
+}
